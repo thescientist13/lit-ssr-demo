@@ -18,8 +18,6 @@ const {nodeResolve} = koaNodeResolve;
 const moduleUrl = new URL(import.meta.url);
 const packageRoot = path.resolve(moduleUrl.pathname, '../../');
 
-console.debug('packageRoot', packageRoot);
-
 const port = 8080;
 
 // This is a fairly standard Koa server that represents how the SSR API might
