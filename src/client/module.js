@@ -20,7 +20,6 @@ export const initialData = {
   wasUpdated: false,
 };
  
- 
 export class MyElement extends LitElement {
   static styles = css`
     :host {
@@ -44,27 +43,27 @@ export class MyElement extends LitElement {
   `;
 
   static get properties() {
-  return {
-    ptop: {
-      type: String
-    },
-    attr: {
-      type: String,
-      attribute: true
-    },
-    wasUpdated: {
-      type: Boolean,
-      reflect: true
-    }
-  };
-}
+    return {
+      ptop: {
+        type: String
+      },
+      attr: {
+        type: String,
+        attribute: true
+      },
+      wasUpdated: {
+        type: Boolean,
+        reflect: true
+      }
+    };
+  }
 
-//  @property({type: String})
-//  prop = 'initial-prop';
-//  @property({type: String})
-//  attr = 'initial-attr';
-//  @property({type: Boolean, reflect: true})
-//  wasUpdated = false;
+  //  @property({type: String})
+  //  prop = 'initial-prop';
+  //  @property({type: String})
+  //  attr = 'initial-attr';
+  //  @property({type: Boolean, reflect: true})
+  //  wasUpdated = false;
 
   render() {
     return html`
