@@ -11,6 +11,6 @@ A repo for running and testing out use cases with the [**Lit+SSR** demos](https:
 
 You can run both server demos as follows:
 * `npm run serve:global` - use global NodeJS scope for shimming
-* `npm run serve:vm` - uses expiremental NodeJS [vm modules]() for shimming
+* `npm run serve:vm` - uses expiremental NodeJS [vm modules](https://nodejs.org/api/vm.html) for shimming
 
 Run either command to kick off the server and then load it over `localhost:8080` in your browser.
