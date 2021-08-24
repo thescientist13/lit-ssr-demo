@@ -9,7 +9,7 @@
  */
 
 import {render} from '@lit-labs/ssr/lib/render-with-global-dom-shim.js';
-import {template, initialData} from './module.js';
+import {template, initialData} from '../shared/module.js';
 
 export function renderAppWithInitialData() {
   return renderApp(initialData);
@@ -30,7 +30,7 @@ export function* renderApp(data) {
         <script type="module">
           const button = document.querySelector('button');
           button.addEventListener('click', () => {
-            import('./src/global/app-client.js');
+            import('./src/shared/app-client.js');
           });
         </script>
         <script src="./node_modules/@webcomponents/template-shadowroot/template-shadowroot.min.js"></script>
