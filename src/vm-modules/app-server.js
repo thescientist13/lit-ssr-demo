@@ -30,7 +30,7 @@ export function* renderApp(data) {
         <script type="module">
           const button = document.querySelector('button');
           button.addEventListener('click', () => {
-            import('./src/app-client.js');
+            import('./src/vm-modules/app-client.js');
           });
         </script>
         <script src="./node_modules/@webcomponents/template-shadowroot/template-shadowroot.min.js"></script>

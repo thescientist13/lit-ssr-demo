@@ -9,16 +9,17 @@ import staticFiles from 'koa-static';
 import koaNodeResolve from 'koa-node-resolve';
 import {URL} from 'url';
 import * as path from 'path';
-
-import {renderModule} from '@lit-labs/ssr/lib/render-module.js';
 import {Readable} from 'stream';
+import {renderAppWithInitialData} from './app-server.js';
 
 const {nodeResolve} = koaNodeResolve;
 
 const moduleUrl = new URL(import.meta.url);
-const packageRoot = path.resolve(moduleUrl.pathname, '../../');
+const packageRoot = path.resolve(moduleUrl.pathname, '../../..');
 
 const port = 8080;
+
+console.log('Starting Lit SSR server using global scope...');
 
 // This is a fairly standard Koa server that represents how the SSR API might
 // be used.
@@ -30,13 +31,7 @@ app.use(async (ctx, next) => {
     return;
   }
 
-  const ssrResult = await (renderModule(
-    './app-server.js',
-    import.meta.url,
-    'renderAppWithInitialData',
-    []
-  ));
-
+  const ssrResult = renderAppWithInitialData();
   ctx.type = 'text/html';
   ctx.body = Readable.from(ssrResult);
 });

@@ -1,7 +1,8 @@
 {
   "name": "lit-ssr-demo",
   "version": "1.0.0",
-  "description": "A repo for running Lit+SSR.",
+  "description": "A repo for running and testing out use cases with the Lit+SSR demos.",
+  "private": true,
   "main": "./src/server.js",
   "type": "module",
   "repository": {
@@ -21,7 +22,9 @@
     "node": ">=14.16.0"
   },
   "scripts": {
-    "start": "node --experimental-vm-modules ./src/server.js"
+    "serve:global": "node ./src/global/server.js",
+    "serve:vm": "node --experimental-vm-modules ./src/vm-modules/server.js",
+    "start": "npm run serve:vm"
   },
   "dependencies": {
     "@lit-labs/ssr": "^1.0.0-rc.1",
