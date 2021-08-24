@@ -1,6 +1,6 @@
-# lit-ssr-stackblitz
+# lit-ssr-demo
 
-A repo for running [**Lit+SSR**](https://github.com/lit/lit/tree/main/packages/labs/ssr) on Stackblitz, using the [vm-modules](https://nodejs.org/api/vm.html) demo.
+A repo for running [**Lit+SSR**](https://github.com/lit/lit/tree/main/packages/labs/ssr), following the the [vm-modules](https://nodejs.org/api/vm.html) demo from the [**@lit-labs/ssr**](https://github.com/lit/lit/tree/main/packages/labs/ssr/src/demo/vm-modules) repo.
 
 ## Setup
 

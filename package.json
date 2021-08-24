@@ -1,12 +1,12 @@
 {
-  "name": "lit-ssr-stackblitz",
+  "name": "lit-ssr-demo",
   "version": "1.0.0",
-  "description": "A repo for running Lit+SSR on Stackblitz.",
+  "description": "A repo for running Lit+SSR.",
   "main": "./src/server.js",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thescientist13/lit-ssr-stackblitz.git"
+    "url": "git+https://github.com/thescientist13/lit-ssr-demo.git"
   },
   "keywords": [
     "Lit",
