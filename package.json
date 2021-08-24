@@ -22,8 +22,8 @@
     "node": ">=14.16.0"
   },
   "scripts": {
-    "serve:global": "node ./src/global/server.js",
-    "serve:vm": "node --experimental-vm-modules ./src/vm-modules/server.js",
+    "serve:global": "node ./src/server-global/server.js",
+    "serve:vm": "node --experimental-vm-modules ./src/server-vm/server.js",
     "start": "npm run serve:vm"
   },
   "dependencies": {
