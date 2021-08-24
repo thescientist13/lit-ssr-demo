@@ -27,11 +27,11 @@
     "start": "npm run serve:vm"
   },
   "dependencies": {
-    "@lit-labs/ssr": "^1.0.0-rc.1",
+    "@lit-labs/ssr": "^1.0.0-rc.2",
     "@webcomponents/template-shadowroot": "^0.1.0",
     "koa": "^2.13.1",
     "koa-node-resolve": "^1.0.0-pre.9",
     "koa-static": "^5.0.0",
-    "lit": "^2.0.0-rc.2"
+    "lit": "^2.0.0-rc.3"
   }
 }
