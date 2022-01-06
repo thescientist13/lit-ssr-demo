@@ -19,6 +19,28 @@ export const initialData = {
   attr: 'attr-value',
   wasUpdated: false,
 };
+
+// https://lit.dev/playground/#sample=examples/hello-world-javascript
+const greetingTemplate = document.createElement('template');
+greetingTemplate.innerHTML = `
+  <style>
+    :host p {
+      color: blue;
+    }
+  </style>
+  <p>Hello, from Simple Greeting component!</p>
+`;
+
+export class SimpleGreeting extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadowRoot = this.attachShadow({mode: 'closed'});
+    shadowRoot.appendChild(greetingTemplate.content.cloneNode(true));
+  }
+}
+
+customElements.define('simple-greeting', SimpleGreeting);
  
 export class MyElement extends LitElement {
   static styles = css`
@@ -94,4 +116,5 @@ export const template = (data) =>
           ></my-element>
         `
       )}
+    <simple-greeting></simple-greeting>
   `;
